@@ -1,0 +1,127 @@
+*, *::before, *::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+}
+
+html {
+	box-sizing: border-box;
+}
+
+body {
+	width: 100%;
+	background: #000000;
+}
+
+.block {
+	display: grid;
+	place-items: center;
+	height: 16em;
+	background: #66ff00;
+	margin: 1em 0;
+}
+
+.container {
+	display: block;
+	width: 100%;
+	max-width: 71.125em;
+	margin: 0 auto;
+	padding: 0 1em;
+}
+
+.grid {
+	--grid-layout: repeat(8, 1fr);
+	--grid-gap: 0.25em;
+	display: grid;
+	grid-auto-rows: 1fr;
+	grid-template-columns: var(--grid-layout);
+	gap: var(--grid-gap);
+	/* padding: var(--grid-gap); */
+	transform-origin: 0 0;
+	margin: 1em 0;
+}
+
+.grid.four {
+	--grid-layout: repeat(4, 1fr);
+}
+
+.grid.six {
+	--grid-layout: repeat(6, 1fr);
+}
+
+.grid.eight {
+	--grid-layout: repeat(8, 1fr);
+}
+
+.large-gap {
+	--grid-gap: 1em;
+}
+
+.item {
+	position: relative;
+	background: rgb(255, 0, 242);
+	transform-origin: 0 0;
+	cursor: pointer;
+	overflow: hidden;
+	transition: background-color 200ms ease-in-out;
+}
+
+.item::before {
+	content: "";
+	display: block;
+	padding-top: 100%;
+}
+
+.item > .inner {
+	position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    /* transform: translate(-50%, -50%); */
+}
+
+.inner img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.wide,
+.large {
+	grid-column: auto / span 2;
+}
+
+.wide {
+	background: #f8ff00;
+}
+
+.wide::before {
+	padding-top: 50%;
+}
+
+.large {
+	grid-row: auto / span 2;
+	background: rgb(0, 255, 115);
+}
+
+.huge {
+	grid-row: auto / span 4;
+	grid-column: auto / span 4;
+	background:#00f7ff;
+}
+
+.controls {
+	position: fixed;
+	bottom: 0.5rem;
+	right: 0.5rem;
+	z-index: 99;
+}
+
+.toggle {
+	background-color: #000000;
+	color: #ffffff;
+	padding: 1rem;
+	border: 0;
+	cursor: pointer;
+}
