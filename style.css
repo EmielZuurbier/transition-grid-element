@@ -38,12 +38,12 @@
 		"controls" auto / 1fr;
 }
 
-@media screen and (min-width: 30em) {
+@media screen and (min-width: 40em) {
 
 	:root {
 		--layout: "container controls" 1fr / 1fr 20em;
 	}
-	
+
 }
 
 *, *::before, *::after {
