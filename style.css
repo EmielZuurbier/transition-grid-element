@@ -112,6 +112,9 @@ strong {
 	display: grid;
 	grid-template-columns: 1fr;
 	grid-gap: 1em;
+	padding: var(--block-padding);
+    border: var(--border-size) var(--border-style) var(--color-black-80);
+    border-radius: var(--border-radius);
 }
 
 @media screen and (min-width: 20em) {
