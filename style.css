@@ -110,8 +110,16 @@ strong {
 
 .buttons {
 	display: grid;
-	grid-template-columns: 1fr 1fr;
+	grid-template-columns: 1fr;
 	grid-gap: 1em;
+}
+
+@media screen and (min-width: 20em) {
+
+	.buttons {
+		grid-template-columns: 1fr 1fr;
+	}
+
 }
 
 .field {
@@ -152,23 +160,10 @@ label > span {
 
 .input--button {
 	position: relative;
-}
-
-.input--button::before {
-	content: "";
-	display: block;
-	padding-top: 50%;
-}
-
-.input--button > span {
-	position: absolute;
-	top: 0;
-	left: 0;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	height: 100%;
-	width: 100%;
+	height: 3.125rem;
 }
 
 .input:hover,
