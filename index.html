@@ -3,13 +3,15 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Grid Animation</title>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto+Condensed:ital,wght@0,400;1,700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="./style.css">
 </head>
 <body>
 
 	<div class="layout">
 		<main class="container">
-			<transition-grid class="grid" duration="250" easing="ease-in-out">
+			<transition-grid class="grid four" duration="250" easing="ease-in-out">
 				<div class="item large"><div class="inner"></div></div>
 				<div class="item"><div class="inner"></div></div>
 				<div class="item"><div class="inner"></div></div>
@@ -25,28 +27,32 @@
 		</main>
 		<aside class="controls">
 			<div class="sticky">
+				<header>
+					<h1>Transition Grid</h1>
+					<p>Change any setting, play with the toggles and click items to see the animations in their full glory</p>
+				</header>
 				<form class="js-attributes">
 					<div class="fields">
-						<div class="input">
+						<div class="field">
 							<label for="duration">Duration</label>
-							<input type="number" class="js-duration" id="duration" name="duration" value="">
+							<input type="number" class="input js-duration" id="duration" name="duration" value="">
 						</div>
-						<div class="input">
+						<div class="field">
 							<label for="stagger">Stagger</label>
-							<input type="number" class="js-stagger" id="stagger" name="stagger" value="">
+							<input type="number" class="input js-stagger" id="stagger" name="stagger" value="">
 						</div>
-						<div class="input">
+						<div class="field">
 							<label for="easing">Easing</label>
-							<input type="text" class="js-easing" id="easing" name="easing" value="">
+							<input type="text" class="input js-easing" id="easing" name="easing" value="">
 						</div>
 					</div>
 				</form>
 				<div class="buttons">
-					<button class="toggle js-randomize">Randomize layout</button>
-					<button class="toggle js-layout">Switch grid</button>
-					<button class="toggle js-gap">Toggle gap</button>
-					<button class="toggle js-add">Add random item</button>
-					<button class="toggle js-remove">Remove random item</button>
+					<button class="input input--button js-randomize"><span>Randomize layout</span></button>
+					<button class="input input--button js-layout"><span>Switch grid</span></button>
+					<button class="input input--button js-gap"><span>Toggle gap</span></button>
+					<button class="input input--button js-add"><span>Add random item</span></button>
+					<button class="input input--button js-remove"><span>Remove random item</span></button>
 				</div>
 			</div>
 		</aside>
