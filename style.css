@@ -32,6 +32,18 @@
 	--border-size: 1px;
 	--border-style: solid;
 	--block-padding: 1em;
+
+	--layout: 
+		"container" auto
+		"controls" auto / 1fr;
+}
+
+@media screen and (min-width: 30em) {
+
+	:root {
+		--layout: "container controls" 1fr / 1fr 20em;
+	}
+	
 }
 
 *, *::before, *::after {
@@ -71,8 +83,7 @@ strong {
 
 .layout {
 	display: grid;
-	grid-template:
-		"container controls" 1fr / 1fr 20em;
+	grid-template: var(--layout);
 	height: 100%;
 }
 
