@@ -32,7 +32,7 @@ module.exports = {
     extensions: [ '.ts', '.js' ],
   },
   output: {
-    filename: 'animate-grid-element.js',
+    filename: 'transition-grid-element.js',
     path: path.resolve(__dirname, 'dist'),
   },
   watchOptions: {

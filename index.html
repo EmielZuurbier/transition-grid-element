@@ -1,0 +1,40 @@
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Grid Animation</title>
+	<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+	<div class="controls">
+		<button class="toggle js-randomize">Randomize layout</button>
+		<button class="toggle js-layout">Switch grid</button>
+		<button class="toggle js-gap">Toggle gap</button>
+		<button class="toggle js-add">Add random item</button>
+		<button class="toggle js-remove">Remove random item</button>
+	</div>
+
+	<!-- cubic-bezier(.19,1.45,.45,1) -->
+
+	<div class="container">
+		<transition-grid class="grid" duration="250" easing="ease-in-out">
+			<div class="item large"><div class="inner"></div></div>
+			<div class="item"><div class="inner"></div></div>
+			<div class="item"><div class="inner"></div></div>
+			<div class="item"><div class="inner"></div></div>
+			<div class="item"><div class="inner"></div></div>
+			<div class="item"><div class="inner"></div></div>
+			<div class="item"><div class="inner"></div></div>
+			<div class="item"><div class="inner"></div></div>
+			<div class="item"><div class="inner"></div></div>
+			<div class="item wide"><div class="inner"></div></div>
+			<div class="item wide"><div class="inner"></div></div>
+		</transition-grid>
+	</div>
+
+	<script src="./dist/transition-grid-element.js"></script>
+	<script src="./randomize-grid.js"></script>
+	
+</body>
+</html>
