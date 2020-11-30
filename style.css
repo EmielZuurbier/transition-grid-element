@@ -71,10 +71,9 @@ strong {
 
 .layout {
 	display: grid;
-	place-items: center;
-	height: 16em;
-	background: #66ff00;
-	margin: 1em 0;
+	grid-template:
+		"container controls" 1fr / 1fr 20em;
+	height: 100%;
 }
 
 .sticky {
