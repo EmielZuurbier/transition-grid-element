@@ -89,6 +89,11 @@ input[type="number"]:hover,
 input[type="text"]:focus,
 input[type="number"]:focus {
 	background-color: #333333;
+}
+
+.toggle:focus,
+input[type="text"]:focus,
+input[type="number"]:focus {
 	outline: 0;
 }
 
