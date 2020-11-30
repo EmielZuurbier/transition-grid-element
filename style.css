@@ -64,7 +64,12 @@ p {
 	margin-bottom: 1rem;
 }
 
-.block {
+strong {
+	color: var(--color-white);
+	font-weight: var(--font-normal)
+}
+
+.layout {
 	display: grid;
 	place-items: center;
 	height: 16em;
@@ -91,7 +96,6 @@ p {
 .fields {
 	display: flex;
 	flex-direction: column;
-	margin: var(--margin-gap-correction) 0;
 }
 
 .buttons {
@@ -115,6 +119,11 @@ label {
 	color: var(--color-white);
 	font-weight: var(--font-bold);
 	margin-bottom: 0.25rem;
+}
+
+label > span {
+	color: var(--color-black-30);
+	margin-left: 0.5rem;
 }
 
 .input {
