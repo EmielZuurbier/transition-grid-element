@@ -7,30 +7,49 @@
 </head>
 <body>
 
-	<div class="controls">
-		<button class="toggle js-randomize">Randomize layout</button>
-		<button class="toggle js-layout">Switch grid</button>
-		<button class="toggle js-gap">Toggle gap</button>
-		<button class="toggle js-add">Add random item</button>
-		<button class="toggle js-remove">Remove random item</button>
-	</div>
-
-	<!-- cubic-bezier(.19,1.45,.45,1) -->
-
-	<div class="container">
-		<transition-grid class="grid" duration="250" easing="ease-in-out">
-			<div class="item large"><div class="inner"></div></div>
-			<div class="item"><div class="inner"></div></div>
-			<div class="item"><div class="inner"></div></div>
-			<div class="item"><div class="inner"></div></div>
-			<div class="item"><div class="inner"></div></div>
-			<div class="item"><div class="inner"></div></div>
-			<div class="item"><div class="inner"></div></div>
-			<div class="item"><div class="inner"></div></div>
-			<div class="item"><div class="inner"></div></div>
-			<div class="item wide"><div class="inner"></div></div>
-			<div class="item wide"><div class="inner"></div></div>
-		</transition-grid>
+	<div class="layout">
+		<main class="container">
+			<transition-grid class="grid" duration="250" easing="ease-in-out">
+				<div class="item large"><div class="inner"></div></div>
+				<div class="item"><div class="inner"></div></div>
+				<div class="item"><div class="inner"></div></div>
+				<div class="item"><div class="inner"></div></div>
+				<div class="item"><div class="inner"></div></div>
+				<div class="item"><div class="inner"></div></div>
+				<div class="item"><div class="inner"></div></div>
+				<div class="item"><div class="inner"></div></div>
+				<div class="item"><div class="inner"></div></div>
+				<div class="item wide"><div class="inner"></div></div>
+				<div class="item wide"><div class="inner"></div></div>
+			</transition-grid>
+		</main>
+		<aside class="controls">
+			<div class="sticky">
+				<form class="js-attributes">
+					<div class="fields">
+						<div class="input">
+							<label for="duration">Duration</label>
+							<input type="number" class="js-duration" id="duration" name="duration" value="">
+						</div>
+						<div class="input">
+							<label for="stagger">Stagger</label>
+							<input type="number" class="js-stagger" id="stagger" name="stagger" value="">
+						</div>
+						<div class="input">
+							<label for="easing">Easing</label>
+							<input type="text" class="js-easing" id="easing" name="easing" value="">
+						</div>
+					</div>
+				</form>
+				<div class="buttons">
+					<button class="toggle js-randomize">Randomize layout</button>
+					<button class="toggle js-layout">Switch grid</button>
+					<button class="toggle js-gap">Toggle gap</button>
+					<button class="toggle js-add">Add random item</button>
+					<button class="toggle js-remove">Remove random item</button>
+				</div>
+			</div>
+		</aside>
 	</div>
 
 	<script src="./dist/transition-grid-element.js"></script>

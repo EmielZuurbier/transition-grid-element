@@ -21,12 +21,75 @@ body {
 	margin: 1em 0;
 }
 
+.sticky {
+	position: sticky;
+	top: 1em;
+}
+
 .container {
 	display: block;
 	width: 100%;
 	max-width: 71.125em;
 	margin: 0 auto;
 	padding: 0 1em;
+}
+
+.controls {
+	grid-area: controls;
+	background-color: #111111;
+	padding: 1em;
+}
+
+.buttons,
+.fields {
+	display: flex;
+	flex-direction: column;
+	margin: -0.25em 0;
+}
+
+.input {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 1em;
+}
+
+input[type="text"],
+input[type="number"] {
+	appearance: none;
+	background-color: #222222;
+	color: #ffffff;
+	padding: 1rem;
+	border: 0;
+	border-radius: 0.25em;
+	cursor: pointer;
+	margin: 0.25em 0;
+	transition: background-color 150ms ease-in-out;
+}
+
+label {
+	font-size: 0.75em;
+	color: #ffffff;
+}
+
+.toggle {
+	font-size: 0.75em;
+	background-color: #222222;
+	color: #ffffff;
+	padding: 1rem;
+	border: 0;
+	border-radius: 0.25em;
+	cursor: pointer;
+	margin: 0.25rem 0;
+	transition: background-color 150ms ease-in-out;
+}
+
+.toggle:hover,
+input[type="text"]:hover,
+input[type="number"]:hover,
+input[type="text"]:focus,
+input[type="number"]:focus {
+	background-color: #333333;
+	outline: 0;
 }
 
 .grid {
@@ -63,6 +126,7 @@ body {
 	transform-origin: 0 0;
 	cursor: pointer;
 	overflow: hidden;
+	border-radius: 0.25em;
 	transition: background-color 200ms ease-in-out;
 }
 
@@ -109,19 +173,4 @@ body {
 	grid-row: auto / span 4;
 	grid-column: auto / span 4;
 	background:#00f7ff;
-}
-
-.controls {
-	position: fixed;
-	bottom: 0.5rem;
-	right: 0.5rem;
-	z-index: 99;
-}
-
-.toggle {
-	background-color: #000000;
-	color: #ffffff;
-	padding: 1rem;
-	border: 0;
-	cursor: pointer;
 }
