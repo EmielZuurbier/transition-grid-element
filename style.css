@@ -97,6 +97,12 @@ input[type="number"]:focus {
 	outline: 0;
 }
 
+.toggle:active,
+input[type="text"]:active,
+input[type="number"]:active {
+	background-color: #444444;
+}
+
 .grid {
 	--grid-layout: repeat(8, 1fr);
 	--grid-gap: 0.25em;
